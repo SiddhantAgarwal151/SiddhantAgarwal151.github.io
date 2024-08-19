@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial=1.0">
+        <meta name="description" content="Siddhant Agarwal's Website">
+        <meta name="keywords" content="about me, blog, email, accomplishments">
+        <meta name="author" content="Siddhanta151">
+        <title>Siddhant Agarwal's Personal Website</title>
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- stylesheet -->
+        <link href="styles/styles.css" rel="stylesheet">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="scripts/scripts.js" defer></script>
+    </head>
+
+    <body>
+        <!-- overlay for mobile -->
+        <div id="overlay">
+            <div>
+                <i class="fa fa-times" title="button to close mobile navigation" onclick="off()"></i>
+            </div>
+            <div class="overlay-text">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html" class="blog-nav">Blog</a>
+            </div>
+        </div>
+        <header>
+            <nav class="nav full-nav">
+                <div>
+                    <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 1.5rem;" loading="lazy">
+                </div>
+                <div>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html" class="blog-nav">Blog</a>
+                </div>
+            </nav>
+
+            <!-- mobile -->
+            <nav class="nav mobile-nav">
+                <div>
+                    <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 10%;" load="lazy">
+                </div>
+                <div>
+                    <i class="fa-solid fa-bars" title="button to open navigation" onclick="on()"></i>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="hero-container">
+                <img class="hero-image" src="images/Siddhant Posed.jpg" alt="blog hero open" load="lazy">
+                <div class="hero-text">
+                    <h1>Siddhant Agarwal's Website</h1>
+                    <a href="blog.html" class="hero-btn">Blog</a>
+                </div>
+            </div>
+            <div class="red-spacer"></div>
+
+        </main>
+
+        <!-- footer-->
+        <footer>
+            <div>
+                <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 10%;" loading="lazy">
+            </div>
+            <div>
+                <div>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div>
+                    <h2>Copyright 2024 Siddhanta151</h2>
+                </div>
+            </div>
+            <div>
+                <a href="https://github.com/SiddhantAgarwal151" target="_blank">
+                    <img src="images/Github Logo.png" alt="Github Logo" style="width: 10%;" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/sid_ag03" target="_blank">
+                    <img src="images/Instagram Logo.png" alt="Instagram Logo" style="width: 10%;" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/sidagar1" target="_blank">
+                    <img src="images/LinkedIn Logo.png" alt="LinkedIn Logo" style="width: 10%;" loading="lazy">
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
