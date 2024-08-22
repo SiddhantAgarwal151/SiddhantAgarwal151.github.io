@@ -286,6 +286,30 @@ a.dotted-link:hover {
     color: #b0b7bf;
     font-weight: 500;
 }
+.education-inner {
+    background: #BDBDBD;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the Education box */
+.education-box {
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the box horizontally */
+    padding: 15px; /* Add padding inside the box for better spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visual separation */
+    border: 1px solid #ddd; /* Optional: Add a border for visual separation */
+    border-radius: 8px; /* Optional: Rounded corners for a modern look */
+    height: fit-content;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .education-box {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
 
 /* Blog Section */
 .blog .item {
