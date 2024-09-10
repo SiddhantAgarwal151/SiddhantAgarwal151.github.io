@@ -1,145 +1,311 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial=1.0">
-        <meta name="description" content="Siddhant Agarwal's Website">
-        <meta name="keywords" content="about me, blog, email, accomplishments">
-        <meta name="author" content="Siddhanta151">
-        <title>Siddhant Agarwal's Personal Website About</title>
-        <!-- google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <!-- stylesheet -->
-        <link href="styles/styles.css" rel="stylesheet">
-        <!-- font awesome cdn -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Siddhant Agarwal's Blog">
+    <meta name="keywords" content="blog, articles, tech, personal">
+    <meta name="author" content="Siddhanta151">
+    <title>Siddhant Agarwal's Blog</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link href="styles/styles.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
          crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="scripts/scripts.js" defer></script>
-    </head>
+    <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+    <!-- Overlay for mobile navigation -->
+    <div id="overlay">
+        <div>
+            <i class="fa fa-times" title="Close navigation" onclick="off()"></i>
+        </div>
+        <div class="overlay-text">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html" class="blog-nav">Blog</a>
+        </div>
+    </div>
 
-    <body>
-        <!-- overlay for mobile -->
-        <div id="overlay">
+    <!-- Header -->
+    <header>
+        <nav class="nav full-nav">
             <div>
-                <i class="fa fa-times" title="button to close mobile navigation" onclick="off()"></i>
             </div>
-            <div class="overlay-text">
+            <div>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
                 <a href="blog.html" class="blog-nav">Blog</a>
             </div>
-        </div>
-        <header>
-            <nav class="nav full-nav">
-                <div>
-                    <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 10%;" loading="lazy">
-                </div>
-                <div>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="blog.html" class="blog-nav">Blog</a>
-                </div>
-            </nav>
+        </nav>
 
-            <!-- mobile -->
-            <nav class="nav mobile-nav">
-                <div>
-                    <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 10%;" load="lazy">
-                </div>
-                <div>
-                    <i class="fa-solid fa-bars" title="button to open navigation" onclick="on()"></i>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="red-spacer"></div>
-
-            <!-- form -->
-            <div>
-                <h1>Blog</h1>
-                <div class="order">
-                    <form>
-                        <div class="form1">
-                            <div>
-                                <h3>Alvin's Pizzeria</h3>
-                                <h3>231979 Austin, TX</h3>
-                                <div>
-                                    <input type="radio" id="pickup" name="pick" value="1">
-                                    <label for="pickup">Pickup</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="dine-in" name="pick" value="1">
-                                    <label for="dine-in">Dine-in</label>
-                                </div>
-                            </div>
-                            <div>
-                                <h3>Order Details</h3>
-                            </div>
-                        </div>
-                        <hr class="form-hr">
-                        <div class="form-input">
-                            <h3>Info</h3>
-                            <div>
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" placeholder="John Smith">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" placeholder="johnsmith@gmail.com">
-                                <label for="phone">Phone number:</label>
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                    placeholder="123-456-7890">
-                            </div>
-
-                        </div>
-                        <hr class="form-hr">
-                        <div class="form-input">
-                            <h3>Payment</h3>
-                            <div>
-                                <label for="cardname">Carholder Name:</label>
-                                <input type="text" id="cardname" name="cardname" placeholder="John Smith">
-                                <label for="address">Cardholder Address</label>
-                                <input type="text" id="address" name="address" placeholder="johnsmith@gmail.com">
-                                <label for="card">Card number:</label>
-                                <input type="number" id="card" name="card" placeholder="4111 1111 1111 1111">
-                                <label for="cvv">CVV:</label>
-                                <input type="number" id="cvv" name="cvv" placeholder="411">
-                            </div>
-                        </div>
-                        <div class="form-btn">
-                            <button type="reset" value="Reset">Cancel</button>
-                            <button type="submit" value="Submit">Submit</button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </main>
-
-        <!-- footer-->
-        <footer>
+        <!-- Mobile Navigation -->
+        <nav class="nav mobile-nav">
             <div>
                 <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 10%;" loading="lazy">
             </div>
             <div>
-                <div>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="blog.html">Blog</a>
-                </div>
-                <div>
-                    <h2>Copyright 2024 Siddhanta151</h2>
-                </div>
+                <i class="fa-solid fa-bars" title="Open navigation" onclick="on()"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="blog-posts">
+            <article class="blog-post">
+                <h2>Exploring Sweden</h2>
+                <p>Date: September 4, 2024</p>
+    
+                <p>
+                    <strong>A Journey Through Stockholm and Beyond</strong><br>
+                    My trip to Sweden was filled with incredible sights, history, and unique experiences. From exploring royal palaces to relaxing with a traditional Fika, here's a look at some of the memorable highlights of my journey.
+                </p>
+                <img src="images/DrottingholmPalace.jpg" alt="Blog Image 1" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>A Cruise Through Stockholm</strong><br>
+                    I started my adventure with a two-hour cruise around Stockholm. The city's blend of historical architecture and scenic views was mesmerizing. I captured many photos of the beautiful landscapes and the city’s waterfront, making it a perfect introduction to Sweden.
+                </p>
+                <img src="images/DrottingholmPalace2.jpg" alt="Blog Image 2" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>Drottningholm Palace: A Royal Journey</strong><br>
+                    My visit to **Drottningholm Palace** was a highlight. The palace is still home to Swedish royalty, and the preserved **theater house** was particularly fascinating. This historical site gave me insight into Swedish monarchy and its rich past.
+                </p>
+                <img src="images/Stockholm.jpg" alt="Blog Image 3" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>Butterfly and Shark Exhibit</strong><br>
+                    The **butterfly and shark exhibit** was a unique experience, offering an up-close view of exotic butterflies and marine life. The mix of animals made it an enjoyable and educational stop.
+                </p>
+                <img src="images/StockholmBuilding.jpg" alt="Blog Image 4" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>Fika: A Taste of Swedish Culture</strong><br>
+                    As a vegetarian, my options during **Fika** were somewhat limited, but I enjoyed a delicious treat nonetheless. Fika is a relaxing tradition, and it allowed me to slow down and savor the Swedish way of life for a moment.
+                </p>
+                <img src="images/StockholmFlag.jpg" alt="Blog Image 5" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>Gamla Stan Museum (The Kronor) & Royal Armory</strong><br>
+                    At **Gamla Stan Museum**, I saw treasures from Sweden's past. I also ventured underground to visit the **Royal Armory**, where centuries-old armor and weapons were on display, showcasing Sweden's military history.
+                </p>
+                <img src="images/StockholmStatue1.jpg" alt="Blog Image 6" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>The Ice Bar</strong><br>
+                    Visiting the **Ice Bar** was literally a "cool" experience! Everything, from the glasses to the sculptures, was made entirely of ice. I enjoyed a drink in this frosty atmosphere, making it a memorable stop.
+                </p>
+                <img src="images/IceBar.jpg" alt="Blog Image 7" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>Nobel Prize Museum</strong><br>
+                    The **Nobel Prize Museum** offered insight into the history of the prestigious award. I was particularly impressed by the innovative projects and school exhibits on display, which highlighted the creativity and ingenuity of young minds.
+                </p>
+                <img src="images/StockholmStatue2.jpg" alt="Blog Image 8" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>Skyview Station: A View of Stockholm</strong><br>
+                    A ride to the top of **Skyview Station** provided a stunning panoramic view of Stockholm. It was an unforgettable experience to see the city from such a high vantage point.
+                </p>
+                <img src="images/Skyview.jpg" alt="Blog Image 9" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>Skansen: History and Nature Combined</strong><br>
+                    I ended my trip with a visit to **Skansen**, an open-air museum and zoo. The **medieval village** with its small farms and houses gave me a glimpse into Sweden’s past. The blend of history, wildlife, and culture made Skansen an enriching experience.
+                </p>
+                <img src="images/Skansen1.jpg" alt="Blog Image 10" style="width: 20%;" class="blog-image">
+                <img src="images/Skansen2.jpg" alt="Blog Image 11" style="width: 20%;" class="blog-image">
+                <img src="images/Skansen3.jpg" alt="Blog Image 12" style="width: 20%;" class="blog-image">
+                <img src="images/Skansen4.jpg" alt="Blog Image 13" style="width: 20%;" class="blog-image">
+                <img src="images/Armory1.jpg" alt="Blog Image 10" style="width: 20%;" class="blog-image">
+
+                <p>
+                    Overall, my journey through Sweden was a mix of history, culture, and natural beauty. Each place I visited added a new layer to my understanding of this incredible country.
+                </p>
+            </article>
+
+            <article class="blog-post">
+                <h2>Exploring Finland</h2>
+                <p>Date: September 4, 2024</p>
+    
+                <p>
+                    <strong>A Cruise to Finland: Fun on the Baltic Sea</strong><br>
+                    My trip to Finland started with a fun-filled cruise from Sweden. The ship had a variety of activities, including ping pong, video games, and casino games, making the journey exciting and enjoyable.
+                </p>
+                <img src="images/FinlandCruise.jpg" alt="Blog Image 1" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>Turku Castle: A Journey Through History</strong><br>
+                    Once I arrived in Finland, my first stop was **Turku Castle**. The castle's rich history and impressive architecture made it a fascinating place to explore, with exhibits that showcased Finland’s past.
+                </p>
+                <img src="images/TurkuCastle.jpg" alt="Blog Image 2" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    <strong>Turku Cathedral: A Peaceful Retreat</strong><br>
+                    I also visited **Turku Cathedral**, a beautiful and serene place. The architecture and history of the church were captivating, offering a moment of reflection during my trip.
+                </p>
+                <img src="images/TurkuCastle2.jpg" alt="Blog Image 3" style="width: 20%;" class="blog-image">
+    
+                <p>
+                    Overall, my visit to Finland was a perfect blend of fun and history. The cruise provided a lively start, and the sights of Turku left me with lasting memories of this unique part of the world.
+                </p>
+                <img src="images/TurkuCastle2.jpg" alt="Blog Image 3" style="width: 20%;" class="blog-image">
+
+            </article>
+
+            <article class="blog-post">
+                <h2>Exploring Norway</h2>
+                <p>Date: September 1, 2024</p>
+                
+                <p>
+                    <strong>A Journey Through History, Art, and Culture</strong><br>
+                    My recent trip to Norway was an unforgettable blend of history, art, and adventure. From learning about Norway's role in World War II to marveling at the nation's artistic heritage, each experience left a lasting impression. Here are some highlights from my time in Norway.
+                </p>
+                <img src="images/Oslo.jpg" alt="Blog Image 8" style="width: 20%;" class="blog-image">
+
+                <p>
+                    <strong>Roselette: Reflections on Norway’s WWII History</strong><br>
+                    Roselette offered a poignant insight into Norway's complex history during World War II. It was eye-opening to learn about the persecution faced by German-born Norwegians after the war, illustrating how history often repeats itself in unfortunate ways. The paintings depicting people and events from this period were deeply moving, capturing the pain and resilience of those affected.
+                </p>
+                <img src="images/cruisepic1.jpg" alt="Blog Image 13" style="width: 20%;" class="blog-image">
+
+                <p>
+                    <strong>Vestigial Park: Sculptures and Evolution of Art</strong><br>
+                    Vestigial Park was a unique experience with its collection of sculptures, all created by the artist Vestigial. Although the sculptures were all nude, they were a powerful representation of the human form. The museum next to the park provided an insightful look into how Vestigial's art evolved over time, adding depth to the outdoor experience.
+                </p>
+                <img src="images/Sculpture1.jpg" alt="Blog Image 9" style="width: 20%;" class="blog-image">
+
+                <p>
+                    <strong>Fram Museum: My Favorite Spot!</strong><br>
+                    The Fram Museum stood out as my favorite place in Norway. This museum went above and beyond with its exhibits, featuring an igloo, an ice chamber with a horror theme, and four floors dedicated to the history of Inuits and Norwegians navigating through water and snow. The best part? Getting to explore a historic ship and imagining what it would have been like to travel on it. Next time, I’d love to check out the second room, which includes an art and movie experience.
+                </p>
+                <img src="images/Fram.jpg" alt="Blog Image 10" style="width: 20%;" class="blog-image">
+
+                <p>
+                    <strong>Arkushus Fortress: A Glimpse into Norway's Past</strong><br>
+                    The Arkushus Fortress was a treasure trove of history. The castle itself housed intriguing stories about how royalty was kept within its walls. The prison cells were dark and grim, contrasting sharply with the ornate interiors of the castle. The Norway Resistance Museum provided compelling insights into how Norway resisted Hitler's occupation during WWII, highlighting the bravery and resilience of its people. The Norwegian Armed Forces Museum showcased weaponry and armory from various periods, including modern conflicts like Afghanistan, with vessels that were especially impressive. In the outskirts of the fortress, I watched a play performance, even though I couldn't understand the language, and admired the canons strategically positioned by the river.
+                </p>
+                <img src="images/Arkushus.jpg" alt="Blog Image 11" style="width: 20%;" class="blog-image">
+
+                <p>
+                    <strong>Munch Museum: Art from the Heart of Norway</strong><br>
+                    The Munch Museum was an art lover’s paradise, spanning 13 floors. I finally got to see <em>The Scream</em>, both the original and other versions, which were carefully preserved and kept away from light to prevent deterioration. I found the other paintings by Edvard Munch to be just as captivating, offering a window into his unique perspective. The 12th floor provided a stunning view of the city, although the 13th floor was unfortunately closed to visitors.
+                </p>
+                <img src="images/ScreamingFace.jpg" alt="Blog Image 12" style="width: 20%;" class="blog-image">
+
+                <p>
+                    Overall, my time in Norway was a rich blend of cultural and historical exploration. Each place offered a unique perspective on the nation's past and present, making this journey a truly memorable one.
+                </p>
+                <img src="images/Museum.jpg" alt="Blog Image 13" style="width: 20%;" class="blog-image">
+
+            </article>
+        
+
+            <article class="blog-post">
+                <h2>Exploring Denmark</h2>
+                <p>Date: September 1, 2024</p>
+                
+                <p>
+                    <strong>A Journey Through Denmark's Rich Culture and Modern Marvels</strong><br>
+                    My visit to Denmark was an incredible journey filled with cultural exploration and modern attractions. From canal tours to historic castles, each experience highlighted the unique charm of this beautiful country. Here are some of the highlights from my time in Denmark.
+                </p>
+                <img src="images/canaltour1.jpg" alt="Blog Image 1" style="width: 20%;" class="blog-image">
+
+                <p>
+                    <strong>Copenhagen Canal Tours: Exploring the City by Water</strong><br>
+                    One of the best ways to experience Copenhagen was through a canal tour. It was fascinating to see how many people use boats for their daily commute. The tour offered a unique perspective of the city, highlighting interesting locations and the seamless blend of old and new architecture along the waterfront.
+                </p>
+                <img src="images/canaltour2.jpg" alt="Blog Image 2" style="width: 20%;" class="blog-image">
+
+                <p>
+                    <strong>Ragnarok: A Musical Journey</strong><br>
+                    The Ragnarok museum provided a deep dive into the history of music in Danish and American cultures. The interactive exhibits were a highlight, allowing visitors to listen to music, play with sound frequencies, and even create their own band in eight steps throughout the museum. It was a fun and immersive experience, with lots of interesting instruments and band merchandise on display.
+                </p>
+                <img src="images/Ragnarok.jpg" alt="Blog Image 6" style="width: 40%;" class="blog-image">
+        
+                <p>
+                    <strong>Planetarium: A Look into Our Solar System</strong><br>
+                    The Planetarium offered an insightful journey into our solar system and the stars, presented in a captivating format. Interactive elements, like a light display that detected the elevation of sand, made learning about space engaging. Although I was familiar with much of the information, I was surprised to learn about the extensive amount of space debris orbiting the Earth due to defunct satellites, highlighting a growing issue of space pollution.
+                </p>
+                <img src="images/Copenhagen.jpg" alt="Blog Image 3" style="width: 20%;" class="blog-image">
+
+                <p>
+                    <strong>Rosenborg Castle: A Glimpse into Royalty</strong><br>
+                    Visiting Rosenborg Castle was like stepping back in time. The castle was filled with historical artifacts, including royal jewels and tapestries. The surrounding garden was beautifully maintained, providing a peaceful escape from the city's hustle and bustle. I also had the chance to visit part of the nearby botanical garden, which was a nice addition to the day’s exploration.
+                </p>
+                <img src="images/copenhagenbuilding.jpg" alt="Blog Image 4" style="width: 20%;" class="blog-image">
+
+                <p>
+                    <strong>Christiansborg Palace: Panoramic Views and Ancient Ruins</strong><br>
+                    At Christiansborg Palace, I enjoyed breathtaking views from the top of the palace, where I could see the city spread out in all directions. The visit to the ancient ruins beneath the palace was equally fascinating, showcasing structures that have stood for thousands of years and telling the rich history of Denmark's capital.
+                </p>
+                <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 1.5rem;" loading="lazy">
+
+                <p>
+                    <strong>Ripley’s Believe It or Not? and More: Curiosity Unleashed</strong><br>
+                    The Ripley’s Believe It or Not museum was packed with bizarre and intriguing facts from around the world. Highlights included the exhibit on the tallest man on Earth, which was both fascinating and a bit eerie. The museum also featured jump scares and interactive displays, making it a fun experience for all ages.
+                </p>
+        
+                <p>
+                    <strong>Cisternerne: An Underground Art Experience</strong><br>
+                    The Cisternerne offered a unique, somewhat eerie experience in an underground chamber filled with spatial and sound art. The dimly lit, echoing halls created a hauntingly beautiful atmosphere that was unlike anything else I experienced in Denmark.
+                </p>
+                <img src="images/cisternerne.jpg" alt="Blog Image 5" style="width: 20%;" class="blog-image">
+        
+                <p>
+                    <strong>Museum of Illusions: A Mind-Bending Experience</strong><br>
+                    This museum was full of optical illusions and brain-teasing puzzles, perfect for a group visit. While I enjoyed the various exhibits, it would have been more fun with friends to share the experience with. The interactive nature of the illusions made it a great place to challenge your perception of reality.
+                </p>
+        
+                <p>
+                    <strong>Home of Carlsberg: A Taste of Denmark's Brewing Heritage</strong><br>
+                    My tour of the Carlsberg brewery provided fascinating insights into the history and process of beer-making. The interactive games helped explain the science behind brewing, and I even got to enjoy a sample of the beer at the end of the tour. Learning about the Carlsberg family’s dedication to perfecting their craft added depth to the experience.
+                </p>
+                <img src="images/mermaid.jpg" alt="Blog Image 7" style="width: 20%;" class="blog-image">
+
+                <p>
+                    Overall, my trip to Denmark was a delightful mix of cultural immersion, historical discovery, and modern entertainment. Each attraction offered a unique perspective on Danish life and history, making my journey through this beautiful country both enlightening and enjoyable.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 20%;" loading="lazy">
+        </div>
+        <div>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html">Blog</a>
             </div>
             <div>
-                <img src="images/Siddhant Github.png" alt="Main Page Logo" style="width: 10%;" loading="lazy">
-                <img src="images/Siddhant Instagram.png" alt="Main Page Logo" style="width: 10%;" loading="lazy">
-                <img src="images/Siddhant LinkedIn.png" alt="Main Page Logo" style="width: 10%;" loading="lazy">
+                <h2>Copyright 2024 Siddhanta151</h2>
             </div>
-        </footer>
-    </body>
+        </div>
+        <div>
+            <a href="https://github.com/SiddhantAgarwal151" target="_blank">
+                <img src="images/Github Logo.png" alt="Github Logo" style="width: 10%;" loading="lazy">
+            </a>
+            <a href="https://www.instagram.com/sid_ag03" target="_blank">
+                <img src="images/Instagram Logo.png" alt="Instagram Logo" style="width: 10%;" loading="lazy">
+            </a>
+            <a href="https://www.linkedin.com/in/sidagar1" target="_blank">
+                <img src="images/LinkedIn Logo.png" alt="LinkedIn Logo" style="width: 10%;" loading="lazy">
+            </a>
+        </div>
+    </footer>
+</body>
 </html>

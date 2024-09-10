@@ -6,7 +6,9 @@
  * License: Creative Commons Attribution 3.0 License
  * Website: http://themes.3rdwavemedia.com/
 */
-
+* {
+    font-family: "Roboto", serif;
+}
 /* ======= Base ======= */
 body {
     font-family: 'Lato', arial, sans-serif;
@@ -18,7 +20,7 @@ body {
     margin: 0;
     padding: 0;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #778492;
@@ -191,6 +193,17 @@ a.dotted-link:hover {
     font-size: 24px;
 }
 
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-inline > li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
 /* Projects Section */
 .projects .item {
     margin-bottom: 30px;
@@ -212,28 +225,33 @@ a.dotted-link:hover {
 .skills .intro {
     margin-bottom: 30px;
 }
+
 .skills .skillset .item {
     margin-bottom: 30px;
 }
+
 .skills .skillset .level-title {
     font-size: 16px;
     position: relative;
     margin-top: 0;
     margin-bottom: 10px;
 }
+
 .skills .skillset .level-title .level-label {
     color: #ccd1d6;
     font-size: 14px;
     font-weight: 400;
-    font-family: "Lato", arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     position: absolute;
     right: 0;
     top: 0;
 }
+
 .skills .skillset .level-bar {
     height: 15px;
     background: #e8e8e8;
 }
+
 .skills .skillset .level-bar-inner {
     height: 15px;
     background: #66cb8c;
@@ -243,6 +261,11 @@ a.dotted-link:hover {
 .testimonials .item {
     margin-bottom: 30px;
 }
+
+.testimonials .item:last-child {
+    margin-bottom: 0;
+}
+
 .testimonials .item .quote {
     color: #666;
     font-size: 16px;
@@ -250,19 +273,23 @@ a.dotted-link:hover {
     padding-left: 15px;
     margin-bottom: 15px;
 }
+
 .testimonials .item .quote .fa {
     color: #79d19a;
     margin-right: 15px;
 }
+
 .testimonials .item .source {
     font-size: 14px;
     padding-left: 30px;
     font-weight: 500;
 }
+
 .testimonials .item .source .name {
     color: #939ea9;
     font-weight: 600;
 }
+
 .testimonials .item .source .title {
     color: #999;
 }
@@ -271,25 +298,95 @@ a.dotted-link:hover {
 .education .item {
     margin-bottom: 30px;
 }
+
+.education .item:last-child {
+    margin-bottom: 0;
+}
+
 .education .item .title {
     font-size: 16px;
     margin-top: 0;
 }
+
 .education .item .university {
-    font-family: "Lato", arial, sans-serif;
+    font-family: "Lato", Arial, sans-serif;
     font-size: 13px;
     color: #999;
     font-weight: 600;
     padding-left: 25px;
 }
+
 .education .item .university .year {
     color: #b0b7bf;
     font-weight: 500;
 }
+
 .education-inner {
-    background: #BDBDBD;
+    background: #bdbdbd;
     padding: 30px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Language Section */
+.languages .item {
+    margin-bottom: 15px;
+}
+
+.languages .item .title {
+    color: #778492;
+}
+
+.languages .item .level {
+    color: #999;
+}
+
+.languages .item:last-child {
+    margin-bottom: 0;
+}
+
+.languages .item .fa {
+    color: #79d19a;
+}
+
+/* Blog Section */
+.blog .item {
+    margin-bottom: 30px;
+}
+
+.blog .item .title {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.blog .item .title a {
+    color: #778492;
+}
+
+.blog .item .title a:hover {
+    color: #5f6b77;
+}
+
+.blog .item:last-child {
+    margin-bottom: 0;
+}
+
+.col-md-7 {
+    /* Ensure the column takes full width if required */
+    width: 100%;
+    max-width: 300%;
+    /* Center the content horizontally */
+    text-align: center;
+}
+
+.box-outline {
+    /* Center the aside element horizontally */
+    display: inline-block;
+    /* Optional styles for appearance */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 /* Styling for the Education box */
@@ -326,7 +423,7 @@ a.dotted-link:hover {
     color: #5f6b77;
 }
 
-/* Footer */
+/* footer */
 footer {
     background-color: #BDBDBD;
     display: grid;
@@ -336,22 +433,27 @@ footer {
     color: #A42920;
     font-size: 1rem;
 }
+
 footer div:nth-child(2) {
     text-align: center;
 }
+
 footer div:nth-child(2) div:nth-child(1) {
     display: flex;
     justify-content: center;
 }
+
 footer div:nth-child(2) div:nth-child(1) a {
     text-decoration: none;
     color: #A42920;
     padding: .5rem;
     font-weight: bolder;
 }
+
 footer div:nth-child(3) {
     text-align: right;
 }
+
 footer div:nth-child(1) img,
 footer div:nth-child(3) img {
     padding: .5rem;
@@ -374,4 +476,14 @@ footer div:nth-child(3) img {
         flex: 0 0 100%;
         max-width: 100%;
     }
+}
+
+/* Custom overrides */
+.mt-5 {
+    margin-top: 0 !important;
+}
+
+.my-5 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }

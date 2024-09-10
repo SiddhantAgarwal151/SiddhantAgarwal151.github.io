@@ -153,6 +153,13 @@ header {
     display: block;
 }
 
+.hero-gif {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the GIF */
+}
+
 .hero-text {
     position: absolute;
     top: 50%;
@@ -181,6 +188,37 @@ header {
 .hero-text h1 {
     font-size: 3rem;
     margin: 1rem 0;
+}
+
+.blog-posts {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.blog-post {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.blog-post h2 {
+    color: #A42920;
+    margin-bottom: 0.5rem;
+}
+
+.blog-post p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
 }
 
 /* red spacer */
