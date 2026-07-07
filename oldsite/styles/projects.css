@@ -1,0 +1,169 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #291b3e; /* Dark purple background color */
+    color: #eee; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+.title, .section-title h2 {
+    text-align: center;
+    color: #b76e79;
+    margin-top: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.project-card {
+    background-color: #3b2c57;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: #372952;
+}
+
+.project-info h3 {
+    color: #b76e79; /* Light purple color */
+}
+
+.project-info p {
+    color: #ddd;
+}
+
+.project-info a {
+    display: inline-block;
+    background-color: #b76e79;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.project-info a:hover {
+    background-color: #9c4f62; /* Darker purple color on hover */
+}
+
+/* Personal Projects Section */
+.personal .project-card {
+    background-color: #6e2c2c; /* Red background */
+}
+
+.personal .project-info h3 {
+    color: #ff6f6f; /* Light red color */
+}
+
+.personal .project-info a {
+    background-color: #ff6f6f;
+}
+
+.personal .project-info a:hover {
+    background-color: #d94343; /* Darker red color on hover */
+}
+
+/* Professional Projects Section */
+.professional .project-card {
+    background-color: #2c5d9a;
+}
+
+.professional .project-info h3 {
+    color: #69c0ff; /* Light blue color */
+}
+
+.professional .project-info a {
+    background-color: #69c0ff;
+}
+
+.professional .project-info a:hover {
+    background-color: #468dc1; /* Darker blue color on hover */
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.github-link {
+    color: rgb(209, 206, 206);
+    font-size: 50px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.github-link:hover {
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .project-card {
+        margin: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* footer */
+footer {
+    background-color: #BDBDBD;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 1rem;
+    color: #A42920;
+    font-size: 1rem;
+}
+
+footer div:nth-child(2) {
+    text-align: center;
+}
+
+footer div:nth-child(2) div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+}
+
+footer div:nth-child(2) div:nth-child(1) a {
+    text-decoration: none;
+    color: #A42920;
+    padding: .5rem;
+    font-weight: bolder;
+}
+
+footer div:nth-child(3) {
+    text-align: right;
+}
+
+footer div:nth-child(1) img,
+footer div:nth-child(3) img {
+    padding: .5rem;
+}

@@ -1,100 +1,410 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial=1.0">
-        <meta name="description" content="Siddhant Agarwal's Website">
-        <meta name="keywords" content="about me, blog, email, accomplishments">
-        <meta name="author" content="Siddhanta151">
-        <title>Siddhant Agarwal's Personal Website</title>
-        <!-- google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <!-- stylesheet -->
-        <link href="styles/styles.css" rel="stylesheet">
-        <!-- font awesome cdn -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="scripts/scripts.js" defer></script>
-    </head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Siddhant Agarwal — Personal Website. Backend & cloud software engineer building fault-tolerant systems.">
+<title>Siddhant Agarwal — Personal Website</title>
 
-    <body>
-        <!-- overlay for mobile -->
-        <div id="overlay">
-            <div>
-                <i class="fa fa-times" title="button to close mobile navigation" onclick="off()"></i>
-            </div>
-            <div class="overlay-text">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="blog.html" class="blog-nav">Blog</a>
-            </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">SA</span>
+      <span class="brand-text">S. AGARWAL</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span class="status-pill"><span class="status-dot"></span>OPEN TO WORK</span>
+      <a href="pdfs/Resume - April 2025.pdf" class="btn-ghost" download>Resume</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <ul class="nav-links-mobile" id="navLinksMobile">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="pdfs/Resume - April 2025.pdf" download>Resume</a></li>
+  </ul>
+</nav>
+
+<header id="top" class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy fade-in">
+      <div class="eyebrow">// PERSONAL WEBSITE</div>
+      <h1>Siddhant<br>Agarwal</h1>
+      <p class="hero-role">Backend &amp; Cloud Software Engineer</p>
+      <p class="hero-desc">
+        I build fault-tolerant, mission-critical systems — from distributed event
+        processors to cloud infrastructure. RPI Computer Science grad, currently
+        shipping production software at Tenex Software Solutions.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="pdfs/Resume - April 2025.pdf" class="btn-secondary" download>Download Résumé</a>
+        <a href="https://github.com/SiddhantAgarwal151" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-panel fade-in" aria-label="Status panel">
+      <div class="panel-header">
+        <span class="panel-title">SYSTEM STATUS</span>
+        <span class="status-dot"></span>
+      </div>
+      <div class="panel-row"><span class="panel-key">LOCATION</span><span class="panel-val">Tampa, FL</span></div>
+      <div class="panel-row"><span class="panel-key">ROLE</span><span class="panel-val">Software Developer, Tenex</span></div>
+      <div class="panel-row"><span class="panel-key">EDUCATION</span><span class="panel-val">B.S. CS, RPI '25</span></div>
+      <div class="panel-row"><span class="panel-key">GPA</span><span class="panel-val">3.53</span></div>
+      <div class="panel-row"><span class="panel-key">TARGETING</span><span class="panel-val">Backend / Cloud / Mission-Critical</span></div>
+      <div class="panel-row"><span class="panel-key">AVAILABILITY</span><span class="panel-val panel-val-accent">Actively interviewing</span></div>
+      <div class="panel-footer">uptime: since 2021 · rev. 2026</div>
+    </div>
+  </div>
+  <div class="hero-line" aria-hidden="true"></div>
+</header>
+
+<main>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">// ABOUT</span>
+        <h2>Who I am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy fade-in">
+          <p>
+            I'm a software engineer who likes systems that don't fall over. Most of my
+            work lives at the intersection of backend engineering, cloud infrastructure,
+            and reliability — retry logic, event processing, and the kind of code that
+            has to work even when things go wrong.
+          </p>
+          <p>
+            Outside of production work, I build things for fun: a C++ dungeon-crawler
+            game engine with SFML, a language model from scratch, and a growing cloud
+            analytics platform on AWS. I'm a Zelda fan, a vegetarian, and I'm currently
+            targeting backend, cloud, and defense/mission-critical engineering roles.
+          </p>
         </div>
-        <header>
-            <nav class="nav full-nav">
-                <div>
-                    <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 1.5rem;" loading="lazy">
-                </div>
-                <div>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="blog.html" class="blog-nav">Blog</a>
-                </div>
-            </nav>
+        <div class="about-facts fade-in">
+          <div class="fact-card">
+            <span class="fact-label">Education</span>
+            <span class="fact-value">B.S. Computer Science</span>
+            <span class="fact-sub">Minor, Cognitive Science of AI</span>
+            <span class="fact-sub">Rensselaer Polytechnic Institute · May 2025</span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-label">Coursework</span>
+            <span class="fact-sub">Data Structures · Algorithms · Machine Learning · Operating Systems · Software Design · Linear Algebra</span>
+          </div>
+          <div class="fact-card">
+            <span class="fact-label">Core Stack</span>
+            <span class="fact-sub">C# / .NET · C++ · Python · SQL / PostgreSQL · AWS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <!-- mobile -->
-            <nav class="nav mobile-nav">
-                <div>
-                    <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 10%;" load="lazy">
-                </div>
-                <div>
-                    <i class="fa-solid fa-bars" title="button to open navigation" onclick="on()"></i>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="hero-container">
-                <img class="hero-gif" src="images/Matrix Gif.gif" alt="Animated GIF">
-                <div class="hero-text">
-                    <h1>Siddhant Agarwal's Website</h1>
-                    <a href="blog.html" class="hero-btn">Blog</a>
-                    
-                </div>
-            </div>
-            <div class="red-spacer"></div>
-        </main>        
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-head fade-in">
+        <div>
+          <span class="eyebrow">// PROJECTS</span>
+          <h2>Featured Projects</h2>
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="backend">Backend &amp; Cloud</button>
+          <button class="filter-btn" data-filter="gamedev">Game Dev</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        </div>
+      </div>
 
-        <!-- footer-->
-        <footer>
-            <div>
-                <img src="images/Siddhant Logo.png" alt="Main Page Logo" style="width: 20%;" loading="lazy">
+      <div class="projects-grid">
+
+        <article class="project-card fade-in" data-category="backend" data-project="event-processor">
+          <div class="card-top">
+            <span class="tag-status shipped">SHIPPED</span>
+            <span class="card-date">2025</span>
+          </div>
+          <h3>Fault-Tolerant Event Processing System</h3>
+          <p>A C#/.NET 8 event processor built to keep working when dependencies don't — exponential backoff retries, structured logging, and a REST API on top, scaffolded with Dapper and Serilog and containerized with Docker Compose.</p>
+          <div class="tags">
+            <span class="tag highlight">.NET 8</span>
+            <span class="tag highlight">C#</span>
+            <span class="tag">Dapper</span>
+            <span class="tag">Serilog</span>
+            <span class="tag">Docker Compose</span>
+          </div>
+          <button class="card-link" data-modal="event-processor">View Details →</button>
+        </article>
+
+        <article class="project-card fade-in" data-category="backend" data-project="cloud-analytics">
+          <div class="card-top">
+            <span class="tag-status active">IN PROGRESS</span>
+            <span class="card-date">2026</span>
+          </div>
+          <h3>Cloud Game Analytics Platform</h3>
+          <p>An AWS-based analytics pipeline that ingests gameplay telemetry from my dungeon-crawler engine and turns it into dashboards — built as a cloud-infrastructure portfolio piece alongside the game itself.</p>
+          <div class="tags">
+            <span class="tag highlight">AWS</span>
+            <span class="tag">Python</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Analytics</span>
+          </div>
+          <button class="card-link" data-modal="cloud-analytics">View Details →</button>
+        </article>
+
+        <article class="project-card fade-in" data-category="gamedev" data-project="dungeon-crawler">
+          <div class="card-top">
+            <span class="tag-status active">ACTIVE</span>
+            <span class="card-date">2025 – present</span>
+          </div>
+          <h3>C++ SFML Dungeon Crawler</h3>
+          <p>A dungeon-crawler game engine built from scratch in C++ with SFML — room transitions, door collision systems, and a multi-phase boss (BossOctorok) with projectile mechanics and a working health bar.</p>
+          <div class="modal-media-placeholder card-video-slot">
+            <div class="video-placeholder">
+              <span class="play-icon">▶</span>
+              <span>Gameplay video coming soon</span>
             </div>
-            <div>
-                <div>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="blog.html">Blog</a>
-                </div>
-                <div>
-                    <h2>Copyright 2024 Siddhanta151</h2>
-                </div>
-            </div>
-            <div>
-                <a href="https://github.com/SiddhantAgarwal151" target="_blank">
-                    <img src="images/Github Logo.png" alt="Github Logo" style="width: 10%;" loading="lazy">
-                </a>
-                <a href="https://www.instagram.com/sid_ag03" target="_blank">
-                    <img src="images/Instagram Logo.png" alt="Instagram Logo" style="width: 10%;" loading="lazy">
-                </a>
-                <a href="https://www.linkedin.com/in/sidagar1" target="_blank">
-                    <img src="images/LinkedIn Logo.png" alt="LinkedIn Logo" style="width: 10%;" loading="lazy">
-                </a>
-            </div>
-        </footer>
-    </body>
+          </div>
+          <div class="tags">
+            <span class="tag highlight">C++</span>
+            <span class="tag highlight">SFML</span>
+            <span class="tag">Game Engine</span>
+            <span class="tag">CMake</span>
+          </div>
+          <button class="card-link" data-modal="dungeon-crawler">View Details →</button>
+        </article>
+
+        <article class="project-card fade-in" data-category="fullstack" data-project="clique">
+          <div class="card-top">
+            <span class="tag-status shipped">SHIPPED</span>
+            <span class="card-date">2024</span>
+          </div>
+          <h3>Clique</h3>
+          <p>A social platform for managing clubs, tags, posts, and members — React Native frontend for web and mobile, backed by a Python FastAPI service and PostgreSQL, with full CRUD and admin tooling.</p>
+          <div class="tags">
+            <span class="tag highlight">React Native</span>
+            <span class="tag highlight">FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+          <button class="card-link" data-modal="clique">View Details →</button>
+        </article>
+
+        <article class="project-card fade-in" data-category="backend" data-project="language-model">
+          <div class="card-top">
+            <span class="tag-status shipped">SHIPPED</span>
+            <span class="card-date">2023</span>
+          </div>
+          <h3>Language Model Text Generator</h3>
+          <p>An LSTM-based language model trained from scratch for text generation — my first hands-on dive into sequence models, tokenization, and training loops.</p>
+          <div class="tags">
+            <span class="tag highlight">Python</span>
+            <span class="tag highlight">TensorFlow</span>
+            <span class="tag">LSTM</span>
+          </div>
+          <button class="card-link" data-modal="language-model">View Details →</button>
+        </article>
+
+        <article class="project-card fade-in" data-category="fullstack" data-project="word-linker">
+          <div class="card-top">
+            <span class="tag-status shipped">SHIPPED</span>
+            <span class="card-date">2023</span>
+          </div>
+          <h3>Word Linker</h3>
+          <p>A real-time multiplayer word game where players compete to provide accurate synonyms against the clock — built for speed of play and simple, readable scoring.</p>
+          <div class="tags">
+            <span class="tag highlight">JavaScript</span>
+            <span class="tag">Multiplayer</span>
+          </div>
+          <button class="card-link" data-modal="word-linker">View Details →</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">// EXPERIENCE</span>
+        <h2>Work Log</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-entry fade-in">
+          <div class="timeline-time">2024 — PRESENT</div>
+          <div class="timeline-body">
+            <h3>Software Developer <span>· Tenex Software Solutions</span></h3>
+            <p>Started as an intern and converted to full-time. Work across the full stack of Tenex's cloud-based election and voting-management software — absentee voting workflows, office-type management, and voter registration data handling — using C#, VB.NET, Blazor, SQL, and Go, alongside senior developers on production, mission-critical systems.</p>
+            <div class="tags"><span class="tag">C#</span><span class="tag">Blazor</span><span class="tag">SQL</span><span class="tag">VB.NET</span><span class="tag">Go</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-entry fade-in">
+          <div class="timeline-time">AUG 2023 — DEC 2023</div>
+          <div class="timeline-body">
+            <h3>Undergraduate Teaching Assistant <span>· Rensselaer Polytechnic Institute</span></h3>
+            <p>Held office hours for 20+ students and graded homework and exams for 100+ students in Introduction to Algorithms.</p>
+            <div class="tags"><span class="tag">C</span><span class="tag">Algorithms</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-entry fade-in">
+          <div class="timeline-time">SEP 2022 — DEC 2023</div>
+          <div class="timeline-body">
+            <h3>Open Source Developer <span>· Rensselaer Center for Open Source</span></h3>
+            <p>Contributed to student-led open-source projects, including enemy AI in Unity for an in-development game and firmware for a 3D-printable bionic hand controlled by Arduino.</p>
+            <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Arduino</span><span class="tag">React.js</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-entry fade-in">
+          <div class="timeline-time">JUN 2022 — AUG 2022</div>
+          <div class="timeline-body">
+            <h3>AI &amp; Computer Science Intern <span>· ThoughtFocus</span></h3>
+            <p>Built features for the Deal-Dock product across front-end and back-end, using Auth0 and Amazon S3 to support secure deal processing workflows.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">AWS S3</span><span class="tag">Auth0</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-entry fade-in">
+          <div class="timeline-time">JUL 2021</div>
+          <div class="timeline-body">
+            <h3>Summer Intern <span>· Caregility</span></h3>
+            <p>Explored WiFi, Bluetooth, and video-processing pipelines, including hardware-level data transport for telehealth video devices.</p>
+            <div class="tags"><span class="tag">WiFi/BLE</span><span class="tag">Video Processing</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow">// SKILLS</span>
+        <h2>Toolset</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card fade-in">
+          <h3>Languages</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">C#</span><span class="skill-pill">C++</span><span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span><span class="skill-pill">JavaScript</span><span class="skill-pill">VB.NET</span>
+          </div>
+        </div>
+        <div class="skill-card fade-in">
+          <h3>Backend &amp; Cloud</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">.NET 8</span><span class="skill-pill">AWS</span><span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">Docker</span><span class="skill-pill">FastAPI</span><span class="skill-pill">REST APIs</span>
+            <span class="skill-pill">Dapper</span><span class="skill-pill">Serilog</span>
+          </div>
+        </div>
+        <div class="skill-card fade-in">
+          <h3>Frontend &amp; Frameworks</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Blazor</span><span class="skill-pill">React</span><span class="skill-pill">React Native</span>
+          </div>
+        </div>
+        <div class="skill-card fade-in">
+          <h3>ML / AI</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">TensorFlow</span><span class="skill-pill">PyTorch</span><span class="skill-pill">NumPy</span>
+          </div>
+        </div>
+        <div class="skill-card fade-in">
+          <h3>Game Dev</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">C++</span><span class="skill-pill">SFML</span><span class="skill-pill">Unity</span>
+            <span class="skill-pill">CMake</span><span class="skill-pill">Collision Systems</span>
+          </div>
+        </div>
+        <div class="skill-card fade-in">
+          <h3>Tools</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Git</span><span class="skill-pill">WSL</span><span class="skill-pill">Linux</span>
+            <span class="skill-pill">Windows</span><span class="skill-pill">CI Basics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="fade-in">
+        <span class="eyebrow">// CONTACT</span>
+        <h2>Let's talk</h2>
+        <p class="contact-desc">
+          I'm actively interviewing for backend, cloud infrastructure, and mission-critical
+          software roles. If that overlaps with what you're building, reach out.
+        </p>
+        <a href="mailto:siddhanta151@gmail.com" class="contact-email">siddhanta151@gmail.com</a>
+        <div class="social-row">
+          <a href="https://github.com/SiddhantAgarwal151" target="_blank" rel="noopener noreferrer" class="social-link">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/sidagar1" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 Siddhant Agarwal</span>
+    <span class="footer-rev">personal website · rev. 2026</span>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <span class="tag-status" id="modalStatus">STATUS</span>
+      <h2 class="modal-title" id="modalTitle">Project Title</h2>
+      <span class="modal-date" id="modalDate">Date</span>
+    </div>
+    <div class="modal-body">
+      <div class="modal-media-placeholder" id="modalMedia" style="display:none;"></div>
+      <div class="modal-section">
+        <span class="modal-section-title">Overview</span>
+        <p class="modal-description" id="modalDescription">Project description goes here.</p>
+      </div>
+      <div class="modal-section">
+        <span class="modal-section-title">Technical Details</span>
+        <ul class="modal-technical" id="modalTechnical"></ul>
+      </div>
+      <div class="modal-section modal-links-section" id="modalLinks"></div>
+    </div>
+    <div class="modal-footer" id="modalFooter"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
