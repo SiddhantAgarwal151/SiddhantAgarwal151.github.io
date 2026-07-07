@@ -30,7 +30,7 @@
     </ul>
     <div class="nav-actions">
       <span class="status-pill"><span class="status-dot"></span>OPEN TO WORK</span>
-      <a href="pdfs/Resume - April 2025.pdf" class="btn-ghost" download>Resume</a>
+      <a href="pdfs/Siddhant_Agarwal_resume.pdf" class="btn-ghost" download>Resume</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
@@ -42,7 +42,7 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="pdfs/Resume - April 2025.pdf" download>Resume</a></li>
+    <li><a href="pdfs/Siddhant_Agarwal_resume.pdf" download>Resume</a></li>
   </ul>
 </nav>
 
@@ -59,7 +59,7 @@
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="pdfs/Resume - April 2025.pdf" class="btn-secondary" download>Download Résumé</a>
+        <a href="pdfs/Siddhant_Agarwal_resume.pdf" class="btn-secondary" download>Download Résumé</a>
         <a href="https://github.com/SiddhantAgarwal151" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub ↗</a>
       </div>
     </div>
@@ -136,6 +136,7 @@
           <button class="filter-btn" data-filter="backend">Backend &amp; Cloud</button>
           <button class="filter-btn" data-filter="gamedev">Game Dev</button>
           <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="filter-btn" data-filter="ml">ML &amp; Research</button>
         </div>
       </div>
 
@@ -211,7 +212,52 @@
           <button class="card-link" data-modal="clique">View Details →</button>
         </article>
 
-        <article class="project-card fade-in" data-category="backend" data-project="language-model">
+        <article class="project-card fade-in" data-category="fullstack" data-project="groopfit">
+          <div class="card-top">
+            <span class="tag-status shipped">SHIPPED</span>
+            <span class="card-date">2022</span>
+          </div>
+          <h3>GroopFit</h3>
+          <p>A full-stack web app for matching people into group fitness sessions — React/Redux frontend, an Express/Node API with Google OAuth2 and JWT auth, and a PostgreSQL database underneath.</p>
+          <div class="modal-media-placeholder card-video-slot">
+            <div class="video-placeholder">
+              <span class="play-icon">▶</span>
+              <span>Demo video coming soon</span>
+            </div>
+          </div>
+          <div class="tags">
+            <span class="tag highlight">React</span>
+            <span class="tag highlight">Redux</span>
+            <span class="tag">Express</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">OAuth2 / JWT</span>
+          </div>
+          <button class="card-link" data-modal="groopfit">View Details →</button>
+        </article>
+
+        <article class="project-card fade-in" data-category="ml" data-project="distillation">
+          <div class="card-top">
+            <span class="tag-status shipped">SHIPPED</span>
+            <span class="card-date">2024</span>
+          </div>
+          <h3>Neural Network Model Distillation</h3>
+          <p>A research-style exploration of model distillation — training a compact MLP to reproduce the behavior of a larger network and comparing it against decision trees, implemented in both Python and Java.</p>
+          <div class="modal-media-placeholder card-video-slot">
+            <div class="video-placeholder">
+              <span class="play-icon">▶</span>
+              <span>Walkthrough video coming soon</span>
+            </div>
+          </div>
+          <div class="tags">
+            <span class="tag highlight">Python</span>
+            <span class="tag highlight">Java</span>
+            <span class="tag">Model Distillation</span>
+            <span class="tag">Decision Trees</span>
+          </div>
+          <button class="card-link" data-modal="distillation">View Details →</button>
+        </article>
+
+        <article class="project-card fade-in" data-category="ml" data-project="language-model">
           <div class="card-top">
             <span class="tag-status shipped">SHIPPED</span>
             <span class="card-date">2023</span>

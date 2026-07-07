@@ -66,6 +66,42 @@ const projectData = {
     links: [],
     media: null
   },
+  "groopfit": {
+    title: "GroopFit",
+    status: "SHIPPED",
+    statusClass: "shipped",
+    date: "2022",
+    description: "GroopFit is a full-stack web app built to help people find and join group fitness sessions with others at a similar level. It handles user accounts, session matching, and scheduling behind a Google-authenticated login, with a React/Redux frontend talking to an Express API backed by PostgreSQL.",
+    technical: [
+      "React frontend with Redux Toolkit for state management",
+      "Express.js REST API with a Node.js backend",
+      "Google OAuth2 login via Passport.js, with JWT-based session handling",
+      "PostgreSQL for persisting users, sessions, and group data",
+      "Configured for Heroku deployment via a Procfile"
+    ],
+    links: [
+      { label: "View on GitHub ↗", url: "https://github.com/SiddhantAgarwal151/GroopFit-Web-App" }
+    ],
+    media: "placeholder"
+  },
+  "distillation": {
+    title: "Neural Network Model Distillation",
+    status: "SHIPPED",
+    statusClass: "shipped",
+    date: "2024",
+    description: "A research-driven project exploring model distillation: training a small, fast multilayer perceptron to approximate the behavior of a larger trained network. The project compares the distilled MLP against decision trees on the same tasks, with parallel implementations in Python (for experimentation) and Java (for performance comparisons).",
+    technical: [
+      "Multilayer perceptron (MLP) implementations in both Python and Java",
+      "Model distillation from a larger network into a compact student model",
+      "Decision tree baseline for comparison against the distilled model",
+      "Jupyter notebooks documenting experiments and results",
+      "Custom data generation and normalization utilities in Java"
+    ],
+    links: [
+      { label: "View on GitHub ↗", url: "https://github.com/SiddhantAgarwal151/Distilled-Neural-Network-Models" }
+    ],
+    media: "placeholder"
+  },
   "language-model": {
     title: "Language Model Text Generator",
     status: "SHIPPED",
