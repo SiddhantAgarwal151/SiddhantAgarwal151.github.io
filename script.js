@@ -31,7 +31,7 @@ const projectData = {
       "Designed to plug directly into the C++ dungeon crawler's event stream"
     ],
     links: [],
-    media: "placeholder"
+    media: { type: "placeholder" }
   },
   "dungeon-crawler": {
     title: "C++ SFML Dungeon Crawler",
@@ -49,22 +49,22 @@ const projectData = {
     links: [
       { label: "View on GitHub ↗", url: "https://github.com/SiddhantAgarwal151/Game-Project" }
     ],
-    media: "placeholder"
+    media: { type: "video", src: "videos/dungeon-crawler.mp4" }
   },
-  "clique": {
-    title: "Clique",
+  "dealdock": {
+    title: "Deal-Dock",
     status: "SHIPPED",
     statusClass: "shipped",
-    date: "2024",
-    description: "A social platform for organizing and running clubs — members, posts, tags, and admin tooling all in one place. Built with a React Native frontend that runs on both web and mobile, backed by a Python FastAPI service and a PostgreSQL database.",
+    date: "2022",
+    description: "A deal-processing platform built during my internship at ThoughtFocus, where I shipped features across the front-end and back-end. Auth0 handled secure authentication and Amazon S3 backed document storage, supporting the deal workflows the product was built around.",
     technical: [
-      "React Native frontend targeting both web and mobile from one codebase",
-      "FastAPI backend service handling auth, posts, and club/member management",
-      "PostgreSQL for relational data storage",
-      "Full CRUD flows for clubs, members, tags, and posts"
+      "Full-stack feature development across front-end and back-end",
+      "Auth0 integration for secure authentication",
+      "Amazon S3 for document storage supporting deal-processing workflows",
+      "Built and shipped as part of the production Deal-Dock product"
     ],
     links: [],
-    media: null
+    media: { type: "video", src: "videos/dealdock.mp4" }
   },
   "groopfit": {
     title: "GroopFit",
@@ -82,7 +82,7 @@ const projectData = {
     links: [
       { label: "View on GitHub ↗", url: "https://github.com/SiddhantAgarwal151/GroopFit-Web-App" }
     ],
-    media: "placeholder"
+    media: { type: "video", src: "videos/groopfit.mp4" }
   },
   "distillation": {
     title: "Neural Network Model Distillation",
@@ -100,7 +100,7 @@ const projectData = {
     links: [
       { label: "View on GitHub ↗", url: "https://github.com/SiddhantAgarwal151/Distilled-Neural-Network-Models" }
     ],
-    media: "placeholder"
+    media: { type: "image", src: "images/distillation-mlp-vs-tree.png", alt: "Distilled MLP vs. decision tree comparison chart" }
   },
   "language-model": {
     title: "Language Model Text Generator",
@@ -114,7 +114,7 @@ const projectData = {
       "Custom tokenization and text preprocessing pipeline"
     ],
     links: [],
-    media: null
+    media: { type: "image", src: "images/lstm-text-generator-output.png", alt: "LSTM text generator sample output" }
   },
   "word-linker": {
     title: "Word Linker",
@@ -128,9 +128,15 @@ const projectData = {
       "Synonym-matching validation logic"
     ],
     links: [],
-    media: null
+    media: { type: "image", src: "images/wordlinker-similarity-engine.png", alt: "Word Linker synonym similarity engine output" }
   }
 };
+
+// ============ CARD VIDEO PREVIEWS ============
+document.querySelectorAll('video.card-media').forEach(video => {
+  video.addEventListener('mouseenter', () => video.play());
+  video.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+});
 
 // ============ MOBILE NAV ============
 const navToggle = document.getElementById('navToggle');
@@ -196,7 +202,25 @@ function openModal(key) {
     modalLinks.appendChild(a);
   });
 
-  if (data.media === 'placeholder') {
+  const media = data.media;
+  if (media && media.type === 'video') {
+    modalMedia.style.display = 'block';
+    modalMedia.innerHTML = '';
+    const video = document.createElement('video');
+    video.className = 'modal-media-el';
+    video.src = media.src;
+    video.controls = true;
+    video.playsInline = true;
+    modalMedia.appendChild(video);
+  } else if (media && media.type === 'image') {
+    modalMedia.style.display = 'block';
+    modalMedia.innerHTML = '';
+    const img = document.createElement('img');
+    img.className = 'modal-media-el';
+    img.src = media.src;
+    img.alt = media.alt || '';
+    modalMedia.appendChild(img);
+  } else if (media && media.type === 'placeholder') {
     modalMedia.style.display = 'block';
     modalMedia.innerHTML = '<div class="video-placeholder"><span class="play-icon">▶</span><span>Video coming soon</span></div>';
   } else {
