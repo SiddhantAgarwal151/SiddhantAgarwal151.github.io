@@ -133,10 +133,17 @@ const projectData = {
 };
 
 // ============ CARD VIDEO PREVIEWS ============
-document.querySelectorAll('video.card-media').forEach(video => {
-  video.addEventListener('mouseenter', () => video.play());
-  video.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
-});
+// Autoplay muted previews while in view instead of on hover, since touch devices have no hover state.
+const cardVideoObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.play().catch(() => {});
+    } else {
+      entry.target.pause();
+    }
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('video.card-media').forEach(video => cardVideoObserver.observe(video));
 
 // ============ MOBILE NAV ============
 const navToggle = document.getElementById('navToggle');
