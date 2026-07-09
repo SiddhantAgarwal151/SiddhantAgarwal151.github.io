@@ -439,6 +439,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
   display: block;
   background: var(--bg-panel-alt);
 }
+video.card-media { object-fit: contain; }
 
 /* modal media (video / image) */
 .modal-media-el {
